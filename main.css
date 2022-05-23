@@ -1,0 +1,99 @@
+body {
+    height: 100vh;                                  /* 화면 전체 높이가 높이. 너비 설정은 별 의미가 없음로 생략 */
+    background-image: url("./images/bg.jpg");
+    background-size: cover;                         /* 배경 사이즈는 너비 최대 사이즈에 맞게 자동 설정*/
+    background-repeat: no-repeat;
+    background-attachment: fixed;                   /* 배경 이미지 고정 */
+}
+
+.container {
+    padding: 50px 0;
+}
+
+.container .heros {
+    display: flex;                                  /* 가로 배치 */
+    flex-wrap: wrap;                                /* 가로 배치 시 화면에 보이게 여러 줄로 표시 */
+    justify-content: center;                        /* '여러줄(contetnt)' 배치 시 정렬 방법 설정 : 가운데 */
+    /* background-color: orange; */
+    max-width: 700px;                               /* 가로폭 700px 이하에서만 재배치 */
+    margin: 0 auto;                                 /* 블럭 요소에 가로 사이즈 값이 설정된 상태라면 이렇게 설정 시 가운데 정렬됨 */
+    padding: 40px 20px;
+}
+
+.container .heros .hero {
+    width: 80px;
+    height: 84px;
+    margin: 4px;
+    border: 3px solid #fff;
+    border-radius: 10px;                            /* 각 요소의 모서리 둥글게 표시 */
+    box-sizing: border-box;                         /* content가 아닌 border가 포함된 크기가 80px x 84px로 되도록 설정 */
+    background-color: #555;
+    overflow: hidden;                               /* 요소의 이미지 출력 시, 너비 140%면 넘치므로 넘치는 부분 숨김 설정 */
+    transform: skewX(-14deg);                       /* 각 요소의 모형을 X축으로 -14도 기울여 표시. <내용도 기울어 짐> */
+    transition: transform .1s,
+        background-color .6s;                       /* 변환 시 자연스러운 효과 설정 */
+}
+
+.container .heros .hero:hover {
+    background-color: #ff9c00;
+    transform: skewX(-14deg) scale(1.3);            /* 기존 기울여 표시 외 1.3배 확대 */
+    z-index: 1;                                     /* 표시 우선 순위로 뒤에 있는 요소보다 더 윗쪽에 표시하기 위해 설정 */
+}
+
+.container .heros .hero .image {
+    /* 이미지를 출력 시키기위해  너비 및 높이 설정 필요 . 편의를 위해 % 표시. */
+    width: 140%;                                    /* skewX()로 너비 넓어진 만큼 140%로 설정. <이 경우 내용이 우측 쏠림 배치됨> */
+    height: 100%;                                   /* 이미지가 출력될 높이 설정. 편의를 위해 % 표시 */
+    background-position: center;                    /* 배경인 영웅 이미지 중앙 배치*/
+    background-repeat: no-repeat;                   /* 배경 크기 축소 시 반복 출력 금지 설정*/
+    background-size: 90px;                          /* 배경 이미지 크기 설정 */
+    transform: skewX(14deg) translateX(-16px);      /* 내용인 영웅 이미지의 기울임 복구 및 우측 쏠림을 좌측으로 이동 배치 */
+}
+
+/* 배경에 영웅 이미지 출력. 해당 클래스에 가로/세로가 설정되어 있어야 출력됨 */
+.container .heros .hero:nth-child(1) .image { background-image: url("./images/hero1.png"); }
+.container .heros .hero:nth-child(2) .image { background-image: url("./images/hero2.png"); }
+.container .heros .hero:nth-child(3) .image { background-image: url("./images/hero3.png"); }
+.container .heros .hero:nth-child(4) .image { background-image: url("./images/hero4.png"); }
+.container .heros .hero:nth-child(5) .image { background-image: url("./images/hero5.png"); }
+.container .heros .hero:nth-child(6) .image { background-image: url("./images/hero6.png"); }
+.container .heros .hero:nth-child(7) .image { background-image: url("./images/hero7.png"); }
+.container .heros .hero:nth-child(8) .image { background-image: url("./images/hero8.png"); }
+.container .heros .hero:nth-child(9) .image { background-image: url("./images/hero9.png"); }
+.container .heros .hero:nth-child(10) .image { background-image: url("./images/hero10.png"); }
+
+.container .heros .hero:nth-child(11) .image { background-image: url("./images/hero11.png"); }
+.container .heros .hero:nth-child(12) .image { background-image: url("./images/hero12.png"); }
+.container .heros .hero:nth-child(13) .image { background-image: url("./images/hero13.png"); }
+.container .heros .hero:nth-child(14) .image { background-image: url("./images/hero14.png"); }
+.container .heros .hero:nth-child(15) .image { background-image: url("./images/hero15.png"); }
+.container .heros .hero:nth-child(16) .image { background-image: url("./images/hero16.png"); }
+.container .heros .hero:nth-child(17) .image { background-image: url("./images/hero17.png"); }
+.container .heros .hero:nth-child(18) .image { background-image: url("./images/hero18.png"); }
+.container .heros .hero:nth-child(19) .image { background-image: url("./images/hero19.png"); }
+.container .heros .hero:nth-child(20) .image { background-image: url("./images/hero20.png"); }
+
+.container .heros .hero:nth-child(21) .image { background-image: url("./images/hero21.png"); }
+.container .heros .hero:nth-child(22) .image { background-image: url("./images/hero22.png"); }
+.container .heros .hero:nth-child(23) .image { background-image: url("./images/hero23.png"); }
+.container .heros .hero:nth-child(24) .image { background-image: url("./images/hero24.png"); }
+.container .heros .hero:nth-child(25) .image { background-image: url("./images/hero25.png"); }
+.container .heros .hero:nth-child(26) .image { background-image: url("./images/hero26.png"); }
+.container .heros .hero:nth-child(27) .image { background-image: url("./images/hero27.png"); }
+.container .heros .hero:nth-child(28) .image { background-image: url("./images/hero28.png"); }
+.container .heros .hero:nth-child(29) .image { background-image: url("./images/hero29.png"); }
+.container .heros .hero:nth-child(30) .image { background-image: url("./images/hero30.png"); }
+
+.container .heros .hero:nth-child(31) .image { background-image: url("./images/hero31.png"); }
+.container .heros .hero:nth-child(32) .image { background-image: url("./images/hero32.png"); }
+
+
+.container .logo {
+    max-width: 300px;                       /* 최대 크기는 300px로 제한 */
+    margin: 0 auto;                         /* 가운데 배치 */
+    padding: 0 20px;                        /* 화면 최소화 대비 가로 여백 확보 */
+}
+
+.container .logo img {
+    width: 100%;
+}
